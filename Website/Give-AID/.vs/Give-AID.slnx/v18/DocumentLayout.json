@@ -1,0 +1,313 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\views\\shared\\admin_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\views\\shared\\admin_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\controllers\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\controllers\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\migrations\\20260520061516_m3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\migrations\\20260520061516_m3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\models\\donation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\models\\donation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\models\\event_participation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\models\\event_participation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\models\\purpose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\models\\purpose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\models\\volunteer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\models\\volunteer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\models\\campaign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\models\\campaign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\bridge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\bridge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\migrations\\20260520060118_m1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\migrations\\20260520060118_m1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|c:\\users\\hp elitebook 830 g7\\desktop\\give-aid\\website\\give-aid\\give-aid\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F3E0309E-032D-8AD2-750F-CA92AE768FBD}|Give-AID\\Give-AID.csproj|solutionrelative:give-aid\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Give-AID\\Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "Give-AID\\Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-22T04:49:30.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Admin_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Views\\Shared\\Admin_Layout.cshtml",
+              "RelativeDocumentMoniker": "Give-AID\\Views\\Shared\\Admin_Layout.cshtml",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Views\\Shared\\Admin_Layout.cshtml",
+              "RelativeToolTip": "Give-AID\\Views\\Shared\\Admin_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-22T04:42:55.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Controllers\\Admin.cs",
+              "RelativeDocumentMoniker": "Give-AID\\Controllers\\Admin.cs",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Controllers\\Admin.cs",
+              "RelativeToolTip": "Give-AID\\Controllers\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T04:41:22.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20260520061516_m3.cs",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Migrations\\20260520061516_m3.cs",
+              "RelativeDocumentMoniker": "Give-AID\\Migrations\\20260520061516_m3.cs",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Migrations\\20260520061516_m3.cs",
+              "RelativeToolTip": "Give-AID\\Migrations\\20260520061516_m3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T06:15:16.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Donation.cs",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Donation.cs",
+              "RelativeDocumentMoniker": "Give-AID\\Models\\Donation.cs",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Donation.cs",
+              "RelativeToolTip": "Give-AID\\Models\\Donation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T04:43:18.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Event.cs",
+              "RelativeDocumentMoniker": "Give-AID\\Models\\Event.cs",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Event.cs",
+              "RelativeToolTip": "Give-AID\\Models\\Event.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T04:46:47.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Event_Participation.cs",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Event_Participation.cs",
+              "RelativeDocumentMoniker": "Give-AID\\Models\\Event_Participation.cs",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Event_Participation.cs",
+              "RelativeToolTip": "Give-AID\\Models\\Event_Participation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T04:46:25.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Feedback.cs",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Feedback.cs",
+              "RelativeDocumentMoniker": "Give-AID\\Models\\Feedback.cs",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Feedback.cs",
+              "RelativeToolTip": "Give-AID\\Models\\Feedback.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T04:45:14.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Purpose.cs",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Purpose.cs",
+              "RelativeDocumentMoniker": "Give-AID\\Models\\Purpose.cs",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Purpose.cs",
+              "RelativeToolTip": "Give-AID\\Models\\Purpose.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T05:36:15.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Give-AID\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\User.cs",
+              "RelativeToolTip": "Give-AID\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T04:42:49.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Volunteer.cs",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Volunteer.cs",
+              "RelativeDocumentMoniker": "Give-AID\\Models\\Volunteer.cs",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Volunteer.cs",
+              "RelativeToolTip": "Give-AID\\Models\\Volunteer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T04:43:50.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Give-AID\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Category.cs",
+              "RelativeToolTip": "Give-AID\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T04:47:32.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Admin.cs",
+              "RelativeDocumentMoniker": "Give-AID\\Models\\Admin.cs",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Admin.cs",
+              "RelativeToolTip": "Give-AID\\Models\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T05:31:53.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Campaign.cs",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Campaign.cs",
+              "RelativeDocumentMoniker": "Give-AID\\Models\\Campaign.cs",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Models\\Campaign.cs",
+              "RelativeToolTip": "Give-AID\\Models\\Campaign.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T04:47:05.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Bridge.cs",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Bridge.cs",
+              "RelativeDocumentMoniker": "Give-AID\\Bridge.cs",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Bridge.cs",
+              "RelativeToolTip": "Give-AID\\Bridge.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAcwBQAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T05:52:35.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20260520060118_m1.cs",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Migrations\\20260520060118_m1.cs",
+              "RelativeDocumentMoniker": "Give-AID\\Migrations\\20260520060118_m1.cs",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Migrations\\20260520060118_m1.cs",
+              "RelativeToolTip": "Give-AID\\Migrations\\20260520060118_m1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T06:01:19.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Program.cs",
+              "RelativeDocumentMoniker": "Give-AID\\Program.cs",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\Program.cs",
+              "RelativeToolTip": "Give-AID\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T05:51:49.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\appsettings.json",
+              "RelativeDocumentMoniker": "Give-AID\\appsettings.json",
+              "ToolTip": "C:\\Users\\HP ELITEBOOK 830 G7\\Desktop\\Give-AID\\Website\\Give-AID\\Give-AID\\appsettings.json",
+              "RelativeToolTip": "Give-AID\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-20T05:47:09.009Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
