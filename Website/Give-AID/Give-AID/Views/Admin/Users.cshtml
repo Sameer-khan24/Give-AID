@@ -1,0 +1,36 @@
+﻿@model List<Give_AID.Models.User>
+
+@{
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 style="margin-bottom:20px;">Users Management</h2>
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact No</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.Contact_No</td>
+                <td>@item.address</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

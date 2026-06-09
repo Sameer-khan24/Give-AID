@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Give_AID
 {
-    public class Bridge:DbContext
+    public class Bridge : DbContext
     {
         public Bridge(DbContextOptions<Bridge> options)
             : base(options)
@@ -19,5 +19,6 @@ namespace Give_AID
         public DbSet<Feedback> feedback { get; set; }
         public DbSet<Purpose> purpose { get; set; }
         public DbSet<Volunteer> volunteer { get; set; }
+        public DbSet<CampaignDonation> campaignDonation { get; set; }
     }
 }

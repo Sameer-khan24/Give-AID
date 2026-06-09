@@ -1,0 +1,99 @@
+﻿@model List<Give_AID.Models.Volunteer>
+<th>Actions</th>
+@{
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 style="margin-bottom:20px;">Volunteer Management</h2>
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>User ID</th>
+            <th>Skills</th>
+            <th>Available From</th>
+            <th>Available Till</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.User_ID</td>
+                <td>@item.Skills</td>
+                <td>@item.AvailableFrom</td>
+                <td>@item.AvailableTill</td>
+                <td>
+
+                    @if (item.Status == "Approved")
+                    {
+                        <span style="background:#DCFCE7;
+                         color:#15803D;
+                         padding:6px 12px;
+                         border-radius:20px;
+                         font-weight:600;">
+                            Approved
+                        </span>
+                    }
+                    else if (item.Status == "Rejected")
+                    {
+                        <span style="background:#FEE2E2;
+                         color:#DC2626;
+                         padding:6px 12px;
+                         border-radius:20px;
+                         font-weight:600;">
+                            Rejected
+                        </span>
+                    }
+                    else
+                    {
+                        <span style="background:#FEF3C7;
+                         color:#D97706;
+                         padding:6px 12px;
+                         border-radius:20px;
+                         font-weight:600;">
+                            Pending
+                        </span>
+                    }
+
+                </td>
+                <td>
+
+                    @if (item.Status == "Pending")
+                    {
+                        <a href="/Admin/ApproveVolunteer/@item.Id"
+                           style="background:#22C55E;
+                      color:white;
+                      padding:8px 15px;
+                      text-decoration:none;
+                      border-radius:8px;
+                      font-weight:600;
+                      margin-right:5px;">
+                            Approve
+                        </a>
+
+                        <a href="/Admin/RejectVolunteer/@item.Id"
+                           style="background:#EF4444;
+                      color:white;
+                      padding:8px 15px;
+                      text-decoration:none;
+                      border-radius:8px;
+                      font-weight:600;">
+                            Reject
+                        </a>
+                    }
+
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

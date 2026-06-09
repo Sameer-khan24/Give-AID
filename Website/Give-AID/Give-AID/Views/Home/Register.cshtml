@@ -1,0 +1,239 @@
+﻿@model Give_AID.Models.User
+
+@{
+ViewData["Title"] = "Register";
+Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Give-AID Register</title>
+
+```
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<style>
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body{
+        min-height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        background:
+        linear-gradient(
+        135deg,
+        rgba(5,25,50,.92),
+        rgba(5,80,50,.88)),
+        url('https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1920')
+        center center/cover;
+
+        font-family:'Segoe UI',sans-serif;
+
+        padding:40px 15px;
+    }
+
+    .register-card{
+        width:100%;
+        max-width:650px;
+
+        background:rgba(255,255,255,.12);
+        backdrop-filter:blur(15px);
+
+        border:1px solid rgba(255,255,255,.2);
+
+        border-radius:25px;
+
+        padding:40px;
+
+        box-shadow:0 20px 40px rgba(0,0,0,.3);
+
+        animation:fadeUp .8s ease;
+    }
+
+    @@keyframes fadeUp{
+        from{
+            opacity:0;
+            transform:translateY(50px);
+        }
+        to{
+            opacity:1;
+            transform:translateY(0);
+        }
+    }
+
+    .logo{
+        text-align:center;
+        margin-bottom:25px;
+    }
+
+    .logo h1{
+        font-size:48px;
+        font-weight:800;
+    }
+
+    .give{
+        color:#38BDF8;
+    }
+
+    .aid{
+        color:#22C55E;
+    }
+
+    .title{
+        text-align:center;
+        color:white;
+        margin-bottom:30px;
+    }
+
+    .title h3{
+        font-weight:700;
+    }
+
+    .form-label{
+        color:white;
+        font-weight:600;
+        margin-bottom:8px;
+    }
+
+    .form-control{
+        height:55px;
+        border-radius:15px;
+        border:none;
+    }
+
+    textarea.form-control{
+        height:120px;
+        resize:none;
+    }
+
+    .form-control:focus{
+        box-shadow:none;
+        border:2px solid #22C55E;
+    }
+
+    .btn-register{
+        width:100%;
+        height:58px;
+
+        border:none;
+
+        border-radius:15px;
+
+        background:linear-gradient(
+        135deg,
+        #2563EB,
+        #22C55E);
+
+        color:white;
+        font-size:18px;
+        font-weight:600;
+
+        transition:.3s;
+    }
+
+    .btn-register:hover{
+        transform:translateY(-3px);
+    }
+
+    .login-link{
+        text-align:center;
+        margin-top:20px;
+        color:white;
+    }
+
+    .login-link a{
+        color:#22C55E;
+        text-decoration:none;
+        font-weight:600;
+    }
+
+</style>
+```
+
+</head>
+<body>
+
+```
+<div class="register-card">
+
+    <div class="logo">
+        <h1>
+            <span class="give">Give-</span>
+            <span class="aid">AID</span>
+        </h1>
+    </div>
+
+    <div class="title">
+        <h3>Create Account</h3>
+        <p>Join Give-AID and start making a difference</p>
+    </div>
+
+    <form method="post">
+
+        <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input asp-for="Name"
+                   class="form-control"
+                   placeholder="Enter Full Name" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input asp-for="Email"
+                   type="email"
+                   class="form-control"
+                   placeholder="Enter Email Address" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input asp-for="Password"
+                   type="password"
+                   class="form-control"
+                   placeholder="Create Password" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Contact Number</label>
+            <input asp-for="Contact_No"
+                   class="form-control"
+                   placeholder="03XXXXXXXXX" />
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label">Address</label>
+            <textarea asp-for="address"
+                      class="form-control"
+                      placeholder="Enter Your Address"></textarea>
+        </div>
+
+        <button type="submit" class="btn-register">
+            <i class="fa-solid fa-user-plus"></i>
+            Create Account
+        </button>
+
+    </form>
+
+    <div class="login-link">
+        Already have an account?
+        <a href="/Home/Login">
+            Login Here
+        </a>
+    </div>
+
+</div>
+```
+
+</body>
+</html>

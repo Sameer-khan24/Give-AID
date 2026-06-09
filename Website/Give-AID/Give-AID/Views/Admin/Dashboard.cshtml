@@ -1,6 +1,257 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
     Layout = "~/Views/Shared/Admin_Layout.cshtml";
 }
+
+<style>
+
+    .dashboard-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        gap: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 18px;
+        box-shadow: 0 10px 25px rgba(0,0,0,.08);
+        transition: .3s;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+    .card-title {
+        color: #64748B;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .card-value {
+        font-size: 36px;
+        font-weight: 700;
+        color: #0F172A;
+    }
+
+    .money-card {
+        margin-top: 25px;
+        background: linear-gradient(135deg,#2563EB,#10B981);
+        color: white;
+        padding: 30px;
+        border-radius: 20px;
+    }
+
+        .money-card h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .money-card h1 {
+            margin-top: 10px;
+            font-size: 45px;
+        }
+
+</style>
+
+<div class="dashboard-grid">
+
+    <div class="card">
+        <div class="card-title">Total Users</div>
+        <div class="card-value">@ViewBag.TotalUsers</div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Total Donations</div>
+        <div class="card-value">@ViewBag.TotalDonations</div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Total Campaigns</div>
+        <div class="card-value">@ViewBag.TotalCampaigns</div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Total Volunteers</div>
+        <div class="card-value">@ViewBag.TotalVolunteers</div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Campaign Donations</div>
+        <div class="card-value">@ViewBag.TotalCampaignDonations</div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Total Events</div>
+        <div class="card-value">@ViewBag.TotalEvents</div>
+    </div>
+
+</div>
+
+<div class="dashboard-grid" style="margin-top:25px;">
+
+    <div class="card">
+        <div class="card-title">
+            General Donations
+        </div>
+
+        <div class="card-value">
+            Rs. @ViewBag.GeneralDonationAmount
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">
+            Campaign Donations
+        </div>
+
+        <div class="card-value">
+            Rs. @ViewBag.CampaignDonationAmount
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">
+            Total Raised
+        </div>
+
+        <div class="card-value">
+            Rs. @ViewBag.TotalMoneyRaised
+        </div>
+    </div>
+
+</div>
+@using Give_AID.Models
+
+<div style="
+    margin-top:30px;
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);">
+
+    <h3 style="margin-bottom:20px;">
+        Campaign Progress
+    </h3>
+
+    <table class="table table-bordered">
+
+        <thead>
+            <tr>
+                <th>Campaign</th>
+                <th>Goal Amount</th>
+                <th>Collected</th>
+                <th>Remaining</th>
+                <th>Progress</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (Campaign item in ViewBag.CampaignList)
+            {
+                int collected = 0;
+
+                foreach (CampaignDonation donation in ViewBag.CampaignDonations)
+                {
+                    if (donation.Campaign_ID == item.Id)
+                    {
+                        collected += donation.Amount;
+                    }
+                }
+
+                int remaining = item.Goal_Amount - collected;
+
+                if (remaining < 0)
+                {
+                    remaining = 0;
+                }
+                int progress = item.Goal_Amount > 0
+                ? (collected * 100) / item.Goal_Amount
+                : 0;
+
+                if (progress > 100)
+                {
+                    progress = 100;
+                }
+
+                <tr>
+
+                    <td>@item.Campaign_Name</td>
+
+                    <td>Rs. @item.Goal_Amount</td>
+
+                    <td>Rs. @collected</td>
+
+                    <td>Rs. @remaining</td>
+
+                    <td>
+
+                        <div style="
+            background:#E2E8F0;
+            height:10px;
+            border-radius:20px;
+            overflow:hidden;
+            margin-bottom:5px;">
+
+                            <div style="
+                width:@(progress)%;
+                height:100%;
+                background:linear-gradient(135deg,#10B981,#2563EB);">
+                            </div>
+
+                        </div>
+
+                        <span style="font-weight:600;">
+                            @progress%
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        @if (collected >= item.Goal_Amount)
+                        {
+                            <span style="
+                background:#DCFCE7;
+                color:#15803D;
+                padding:6px 12px;
+                border-radius:20px;
+                font-weight:600;">
+                                Funded
+                            </span>
+                        }
+                        else if (DateTime.Now.Date > item.End_Date.Date)
+                        {
+                            <span style="
+                background:#FEE2E2;
+                color:#DC2626;
+                padding:6px 12px;
+                border-radius:20px;
+                font-weight:600;">
+                                Ended
+                            </span>
+                        }
+                        else
+                        {
+                            <span style="
+                background:#DBEAFE;
+                color:#2563EB;
+                padding:6px 12px;
+                border-radius:20px;
+                font-weight:600;">
+                                Active
+                            </span>
+                        }
+
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>

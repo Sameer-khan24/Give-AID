@@ -1,0 +1,190 @@
+﻿@model List<Give_AID.Models.Campaign>
+
+@{
+    Layout = "~/Views/Shared/User_Layout.cshtml";
+}
+
+<style>
+
+    .campaign-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+        gap: 25px;
+    }
+
+    .campaign-card {
+        background: white;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 0 10px 25px rgba(0,0,0,.08);
+        transition: .3s;
+    }
+
+        .campaign-card:hover {
+            transform: translateY(-5px);
+        }
+
+    .campaign-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #0F172A;
+        margin-bottom: 15px;
+    }
+
+    .campaign-info {
+        margin-bottom: 10px;
+        color: #475569;
+    }
+
+    .campaign-desc {
+        margin-top: 15px;
+        color: #64748B;
+        line-height: 1.6;
+    }
+
+    .goal {
+        margin-top: 15px;
+        font-size: 20px;
+        font-weight: 700;
+        color: #2563EB;
+    }
+
+    .donate-btn {
+        display: inline-block;
+        margin-top: 20px;
+        background: linear-gradient(135deg,#2563EB,#10B981);
+        color: white;
+        text-decoration: none;
+        padding: 12px 22px;
+        border-radius: 12px;
+        font-weight: 600;
+    }
+
+    .page-title {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: #0F172A;
+    }
+
+</style>
+
+<div class="page-title">
+    Active Campaigns
+</div>
+
+<div class="campaign-grid">
+
+    @foreach (var item in Model)
+    {
+        var collected = (int)(ViewData["Collected_" + item.Id] ?? 0);
+
+        var remaining = item.Goal_Amount - collected;
+
+        if (remaining < 0)
+        {
+            remaining = 0;
+        }
+
+        var progress = item.Goal_Amount > 0
+            ? (collected * 100) / item.Goal_Amount
+            : 0;
+
+        if (progress > 100)
+        {
+            progress = 100;
+        }
+
+        <div class="campaign-card">
+
+            <div class="campaign-title">
+                @item.Campaign_Name
+            </div>
+
+            <div class="campaign-info">
+                📅 Start: @item.Start_Date.ToShortDateString()
+            </div>
+
+            <div class="campaign-info">
+                📅 End: @item.End_Date.ToShortDateString()
+            </div>
+
+            <div class="goal">
+                Goal: Rs. @item.Goal_Amount
+            </div>
+
+            <div style="margin-top:15px;font-weight:600;color:#16A34A;">
+                Collected: Rs. @collected
+            </div>
+
+            <div style="margin-top:8px;font-weight:600;color:#DC2626;">
+                Remaining: Rs. @remaining
+            </div>
+
+            <div style="margin-top:15px;">
+
+                <div style="
+                    background:#E2E8F0;
+                    height:12px;
+                    border-radius:20px;
+                    overflow:hidden;">
+
+                    <div style="
+                        width:@(progress)%;
+                        height:100%;
+                        background:linear-gradient(135deg,#10B981,#2563EB);">
+                    </div>
+
+                </div>
+
+                <div style="
+                    margin-top:6px;
+                    font-size:14px;
+                    font-weight:600;
+                    color:#475569;">
+                    @(progress)% Funded
+                </div>
+
+            </div>
+
+            <div class="campaign-desc">
+                @item.Description
+            </div>
+
+            @if (collected >= item.Goal_Amount)
+{
+    <div style="
+        margin-top:20px;
+        background:#DCFCE7;
+        color:#15803D;
+        padding:12px;
+        border-radius:12px;
+        text-align:center;
+        font-weight:700;">
+        ✅ Successfully Funded
+    </div>
+}
+else if (DateTime.Now.Date > item.End_Date.Date)
+{
+    <div style="
+        margin-top:20px;
+        background:#FEE2E2;
+        color:#DC2626;
+        padding:12px;
+        border-radius:12px;
+        text-align:center;
+        font-weight:700;">
+        ❌ Campaign Ended
+    </div>
+}
+else
+{
+    <a href="/Home/CampaignDonate/@item.Id" class="donate-btn">
+        Donate Now
+    </a>
+}
+
+        </div>
+    }
+
+</div>

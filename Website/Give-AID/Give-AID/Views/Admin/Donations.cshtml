@@ -1,0 +1,38 @@
+﻿@model List<Give_AID.Models.Donation>
+
+@{
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 style="margin-bottom:20px;">Donations Management</h2>
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Donar Name</th>
+            <th>Amount</th>
+            <th>Donation Date</th>
+            <th>Payment Mode</th>
+            <th>Purpose</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.User.Name</td>
+                <td>Rs. @item.Amount</td>
+                <td>@item.Donation_Date</td>
+                <td>@item.Payment_Mode</td>
+                <td>@item.Purpose.Purpose_Name</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

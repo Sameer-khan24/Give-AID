@@ -1,0 +1,35 @@
+﻿@model List<Give_AID.Models.Feedback>
+
+@{
+Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2>Feedbacks</h2>
+
+<table class="table table-bordered">
+
+```
+<tr>
+    <th>User</th>
+    <th>Email</th>
+    <th>Message</th>
+    <th>Date</th>
+</tr>
+
+@foreach(var item in Model)
+{
+    <tr>
+
+        <td>@item.User.Name</td>
+
+        <td>@item.User.Email</td>
+
+        <td>@item.Message</td>
+
+        <td>@item.Feedback_Date.ToShortDateString()</td>
+
+    </tr>
+}
+```
+
+</table>

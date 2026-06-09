@@ -1,0 +1,247 @@
+﻿@{
+ViewData["Title"] = "User Login";
+Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Give-AID Login</title>
+
+```
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<style>
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body{
+        min-height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        background:
+        linear-gradient(
+        135deg,
+        rgba(5,25,50,.92),
+        rgba(5,80,50,.88)),
+        url('https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1920')
+        center center/cover;
+
+        font-family:'Segoe UI',sans-serif;
+    }
+
+    .login-card{
+        width:100%;
+        max-width:450px;
+
+        background:rgba(255,255,255,.12);
+        backdrop-filter:blur(15px);
+
+        border:1px solid rgba(255,255,255,.2);
+
+        border-radius:25px;
+
+        padding:40px;
+
+        box-shadow:0 20px 40px rgba(0,0,0,.3);
+
+        animation:fadeUp .8s ease;
+    }
+
+    @@keyframes fadeUp{
+        from{
+            opacity:0;
+            transform:translateY(50px);
+        }
+        to{
+            opacity:1;
+            transform:translateY(0);
+        }
+    }
+
+    .logo{
+        text-align:center;
+        margin-bottom:25px;
+    }
+
+    .logo h1{
+        font-size:48px;
+        font-weight:800;
+        margin:0;
+    }
+
+    .logo .give{
+        color:#38BDF8;
+    }
+
+    .logo .aid{
+        color:#22C55E;
+    }
+
+    .title{
+        color:white;
+        text-align:center;
+        margin-bottom:30px;
+    }
+
+    .title h3{
+        font-weight:700;
+    }
+
+    .form-control{
+        height:55px;
+        border-radius:15px;
+        border:none;
+        padding-left:15px;
+    }
+
+    .form-control:focus{
+        box-shadow:none;
+        border:2px solid #22C55E;
+    }
+
+    .input-group-text{
+        border:none;
+        background:white;
+    }
+
+    .btn-login{
+        width:100%;
+        height:55px;
+
+        border:none;
+
+        border-radius:15px;
+
+        background:linear-gradient(
+        135deg,
+        #2563EB,
+        #22C55E);
+
+        color:white;
+        font-size:18px;
+        font-weight:600;
+
+        transition:.3s;
+    }
+
+    .btn-login:hover{
+        transform:translateY(-3px);
+    }
+
+    .register-link{
+        text-align:center;
+        margin-top:20px;
+        color:white;
+    }
+
+    .register-link a{
+        color:#22C55E;
+        text-decoration:none;
+        font-weight:600;
+    }
+
+    .error-box{
+        background:#FEE2E2;
+        color:#DC2626;
+        padding:12px;
+        border-radius:12px;
+        margin-bottom:20px;
+        text-align:center;
+    }
+
+</style>
+```
+
+</head>
+<body>
+
+```
+<div class="login-card">
+
+    <div class="logo">
+        <h1>
+            <span class="give">Give-</span>
+            <span class="aid">AID</span>
+        </h1>
+    </div>
+
+    <div class="title">
+        <h3>Welcome Back</h3>
+        <p>Login to continue helping others</p>
+    </div>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="error-box">
+            @ViewBag.Error
+        </div>
+    }
+
+    <form method="post">
+
+        <div class="mb-3">
+            <div class="input-group">
+
+                <span class="input-group-text">
+                    <i class="fa-solid fa-envelope"></i>
+                </span>
+
+                <input type="email"
+                       name="email"
+                       class="form-control"
+                       placeholder="Enter Email"
+                       required />
+
+            </div>
+        </div>
+
+        <div class="mb-4">
+
+            <div class="input-group">
+
+                <span class="input-group-text">
+                    <i class="fa-solid fa-lock"></i>
+                </span>
+
+                <input type="password"
+                       name="password"
+                       class="form-control"
+                       placeholder="Enter Password"
+                       required />
+
+            </div>
+
+        </div>
+
+        <button type="submit" class="btn-login">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            Login
+        </button>
+
+    </form>
+
+    <div class="register-link">
+
+        Don't have an account?
+
+        <a href="/Home/Register">
+            Register Here
+        </a>
+
+    </div>
+
+</div>
+```
+
+</body>
+</html>

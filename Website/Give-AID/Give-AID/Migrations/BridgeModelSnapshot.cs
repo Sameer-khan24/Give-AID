@@ -80,6 +80,39 @@ namespace Give_AID.Migrations
                     b.ToTable("campaign");
                 });
 
+            modelBuilder.Entity("Give_AID.Models.CampaignDonation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Campaign_ID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Donation_Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Payment_Mode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("User_ID")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Campaign_ID");
+
+                    b.HasIndex("User_ID");
+
+                    b.ToTable("campaignDonation");
+                });
+
             modelBuilder.Entity("Give_AID.Models.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -239,8 +272,9 @@ namespace Give_AID.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Contact_No")
-                        .HasColumnType("int");
+                    b.Property<string>("Contact_No")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -293,6 +327,25 @@ namespace Give_AID.Migrations
                     b.HasIndex("User_ID");
 
                     b.ToTable("volunteer");
+                });
+
+            modelBuilder.Entity("Give_AID.Models.CampaignDonation", b =>
+                {
+                    b.HasOne("Give_AID.Models.Campaign", "Campaign")
+                        .WithMany()
+                        .HasForeignKey("Campaign_ID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Give_AID.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("User_ID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Campaign");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Give_AID.Models.Donation", b =>

@@ -1,0 +1,56 @@
+﻿@model Give_AID.Models.Event
+
+@{
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div style="max-width:800px;
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 5px 20px rgba(0,0,0,.08);">
+
+    <h2 style="color:#2563EB;margin-bottom:25px;">
+        Create Event
+    </h2>
+
+    <form method="post">
+
+        <div style="margin-bottom:15px;">
+            <label>Event Name</label>
+            <input asp-for="Event_Name"
+                   style="width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;" />
+        </div>
+
+        <div style="margin-bottom:15px;">
+            <label>Event Date</label>
+            <input asp-for="Event_Date"
+                   type="date"
+                   style="width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;" />
+        </div>
+
+        <div style="margin-bottom:15px;">
+            <label>Location</label>
+            <input asp-for="Location"
+                   style="width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;" />
+        </div>
+
+        <div style="margin-bottom:20px;">
+            <label>Description</label>
+            <textarea asp-for="Description"
+                      rows="4"
+                      style="width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;"></textarea>
+        </div>
+
+        <button type="submit"
+                style="background:#2563EB;
+                       color:white;
+                       border:none;
+                       padding:12px 25px;
+                       border-radius:8px;">
+            Save Event
+        </button>
+
+    </form>
+
+</div>

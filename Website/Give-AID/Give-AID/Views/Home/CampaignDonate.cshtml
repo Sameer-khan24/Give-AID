@@ -1,0 +1,130 @@
+﻿@{
+    Layout = "~/Views/Shared/User_Layout.cshtml";
+
+    var user = ViewBag.User as Give_AID.Models.User;
+    var campaign = ViewBag.Campaign as Give_AID.Models.Campaign;
+}
+
+<style>
+
+    .donation-card {
+        max-width: 900px;
+        background: white;
+        padding: 35px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    }
+
+    .page-title {
+        font-size: 32px;
+        font-weight: 700;
+        color: #0F172A;
+        margin-bottom: 10px;
+    }
+
+    .campaign-name {
+        color: #2563EB;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+    .form-control {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #CBD5E1;
+        border-radius: 10px;
+    }
+
+    .btn-donate {
+        background: linear-gradient(135deg,#2563EB,#10B981);
+        color: white;
+        border: none;
+        padding: 14px 25px;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+</style>
+
+<div class="donation-card">
+
+    <div class="page-title">
+        Campaign Donation
+    </div>
+
+    <div class="campaign-name">
+        @campaign.Campaign_Name
+    </div>
+
+    <form method="post">
+
+        <div class="form-group">
+            <label>Name</label>
+            <input class="form-control"
+                   value="@user.Name"
+                   readonly />
+        </div>
+
+        <div class="form-group">
+            <label>Contact Number</label>
+            <input class="form-control"
+                   value="@user.Contact_No"
+                   readonly />
+        </div>
+
+        <div class="form-group">
+            <label>Address</label>
+            <textarea class="form-control"
+                      rows="3"
+                      readonly>@user.address</textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Campaign</label>
+            <input class="form-control"
+                   value="@campaign.Campaign_Name"
+                   readonly />
+            <input type="hidden"
+                   name="campaignId"
+                   value="@campaign.Id" />
+
+        </div>
+
+        <div class="form-group">
+            <label>Amount</label>
+            <input type="number"
+                   name="amount"
+                   class="form-control"
+                   placeholder="Enter donation amount"
+                   required />
+        </div>
+
+        <div class="form-group">
+            <label>Payment Mode</label>
+
+            <select name="paymentMode" class="form-control">
+                <option>JazzCash</option>
+                <option>EasyPaisa</option>
+                <option>Bank Transfer</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-donate">
+            Donate Now
+        </button>
+
+    </form>
+
+</div>

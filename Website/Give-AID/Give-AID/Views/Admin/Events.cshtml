@@ -1,0 +1,71 @@
+﻿@model List<Give_AID.Models.Event>
+
+@{
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 style="margin-bottom:20px;">Events Management</h2>
+
+<a href="/Admin/CreateEvent"
+   style="background:#2563EB;color:white;padding:10px 15px;
+   text-decoration:none;border-radius:8px;">
+    Add Event
+</a>
+
+<br />
+<br />
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Event Name</th>
+            <th>Event Date</th>
+            <th>Location</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Event_Name</td>
+                <td>@item.Event_Date.ToShortDateString()</td>
+                <td>@item.Location</td>
+                <td>@item.Description</td>
+                <td>
+
+                    <a href="/Admin/EditEvent/@item.Id"
+                       style="background:#22C55E;
+                  color:white;
+                  padding:8px 15px;
+                  text-decoration:none;
+                  border-radius:8px;
+                  font-weight:600;
+                  margin-right:5px;">
+                        Edit
+                    </a>
+
+                    <a href="/Admin/DeleteEvent/@item.Id"
+                       onclick="return confirm('Are you sure?')"
+                       style="background:#EF4444;
+                  color:white;
+                  padding:8px 15px;
+                  text-decoration:none;
+                  border-radius:8px;
+                  font-weight:600;">
+                        Delete
+                    </a>
+
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

@@ -1,0 +1,31 @@
+﻿@model Give_AID.Models.Purpose
+
+@{
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div style="max-width:700px;background:white;padding:30px;border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);">
+
+    <h2 style="margin-bottom:25px;color:#2563EB;">
+        Edit Purpose
+    </h2>
+
+    <form method="post">
+
+        <input type="hidden" asp-for="Id" />
+
+        <div style="margin-bottom:20px;">
+            <label>Purpose Name</label>
+            <input asp-for="Purpose_Name"
+                   style="width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;" />
+        </div>
+
+        <button type="submit"
+                style="background:#2563EB;color:white;border:none;padding:12px 25px;border-radius:8px;">
+            Update Purpose
+        </button>
+
+    </form>
+
+</div>

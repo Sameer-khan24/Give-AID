@@ -1,0 +1,101 @@
+﻿@model List<Give_AID.Models.Event_Participation>
+
+@{
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 style="margin-bottom:20px;">Event Participants Management</h2>
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Volunteer ID</th>
+            <th>Event Name</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.Id</td>
+
+                <td>@item.Volunteer_ID</td>
+
+                <td>@item.Event.Event_Name</td>
+
+                <td>
+
+                    @if (item.Status == "Approved")
+                    {
+                        <span style="background:#DCFCE7;
+                                             color:#166534;
+                                             padding:6px 12px;
+                                             border-radius:20px;
+                                             font-weight:600;">
+                            Approved
+                        </span>
+                    }
+                    else if (item.Status == "Rejected")
+                    {
+                        <span style="background:#FEE2E2;
+                                             color:#991B1B;
+                                             padding:6px 12px;
+                                             border-radius:20px;
+                                             font-weight:600;">
+                            Rejected
+                        </span>
+                    }
+                    else
+                    {
+                        <span style="background:#FEF3C7;
+                                             color:#92400E;
+                                             padding:6px 12px;
+                                             border-radius:20px;
+                                             font-weight:600;">
+                            Approval Pending
+                        </span>
+                    }
+
+                </td>
+
+                <td>
+
+                    @if (item.Status == "Approval Pending")
+                    {
+                        <a href="/Admin/ApproveEventParticipant/@item.Id"
+                           style="background:#22C55E;
+                                          color:white;
+                                          padding:8px 15px;
+                                          text-decoration:none;
+                                          border-radius:8px;
+                                          font-weight:600;
+                                          margin-right:5px;">
+                            Approve
+                        </a>
+
+                        <a href="/Admin/RejectEventParticipant/@item.Id"
+                           style="background:#EF4444;
+                                          color:white;
+                                          padding:8px 15px;
+                                          text-decoration:none;
+                                          border-radius:8px;
+                                          font-weight:600;">
+                            Reject
+                        </a>
+                    }
+
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>

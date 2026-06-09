@@ -1,0 +1,111 @@
+﻿@model Give_AID.Models.Volunteer
+
+@{
+    Layout = "~/Views/Shared/User_Layout.cshtml";
+}
+
+<style>
+
+    .form-card {
+        max-width: 800px;
+        background: white;
+        padding: 35px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    }
+
+    .form-title {
+        font-size: 32px;
+        font-weight: 700;
+        color: #0F172A;
+        margin-bottom: 10px;
+    }
+
+    .form-sub {
+        color: #64748B;
+        margin-bottom: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #334155;
+        }
+
+    .form-control {
+        width: 100%;
+        padding: 14px;
+        border: 1px solid #CBD5E1;
+        border-radius: 12px;
+        font-size: 15px;
+    }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #2563EB;
+        }
+
+    .btn-submit {
+        background: linear-gradient(135deg,#2563EB,#10B981);
+        color: white;
+        border: none;
+        padding: 14px 30px;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+        .btn-submit:hover {
+            opacity: .9;
+        }
+
+</style>
+
+<div class="form-card">
+
+    
+    <div class="form-title">
+        Volunteer Application
+    </div>
+
+    <div class="form-sub">
+        Join our mission and help communities through volunteer work.
+    </div>
+
+    <form method="post">
+
+        <div class="form-group">
+            <label>Skills</label>
+            <input asp-for="Skills"
+                   class="form-control"
+                   placeholder="Teaching, First Aid, Fundraising..." />
+        </div>
+
+        <div class="form-group">
+            <label>Available From</label>
+            <input asp-for="AvailableFrom"
+                   type="date"
+                   class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label>Available Till</label>
+            <input asp-for="AvailableTill"
+                   type="date"
+                   class="form-control" />
+        </div>
+
+        <button type="submit" class="btn-submit">
+            Submit Application
+        </button>
+
+    </form>
+    
+
+</div>

@@ -1,0 +1,48 @@
+﻿@model List<Give_AID.Models.Purpose>
+
+@{
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 style="margin-bottom:20px;">Purpose Management</h2>
+
+<a href="/Admin/CreatePurpose"
+   style="background:#2563EB;color:white;padding:10px 15px;
+   text-decoration:none;border-radius:5px;">
+    Add Purpose
+</a>
+
+<br />
+<br />
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Purpose Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Purpose_Name</td>
+
+                <td>
+                    <a href="/Admin/EditPurpose/@item.Id">Edit</a> |
+                    <a href="/Admin/DeletePurpose/@item.Id"
+                       onclick="return confirm('Are you sure?')">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

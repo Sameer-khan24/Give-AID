@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -341,26 +342,55 @@
         </div>
 
         <div class="sb-section">Main</div>
-        <a class="nav-item active" href="#">
+        @{
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+
+    string pageTitle = currentAction switch
+    {
+        "CampaignDonations" => "Campaign Donations",
+        "EventParticipants" => "Event Participants",
+        _ => currentAction
+    };
+         }
+
+<a class="nav-item @(currentAction == "Dashboard" ? "active" : "")" href="/Admin/Dashboard">
             <span class="ni"><i class="fa-solid fa-gauge-high"></i></span> Dashboard
         </a>
-        <a class="nav-item" href="#">
+        <a class="nav-item @(currentAction == "Donations" ? "active" : "")" href="/Admin/Donations">
             <span class="ni"><i class="fa-solid fa-hand-holding-dollar"></i></span> Donations
-            <span class="nb">12</span>
         </a>
-        <a class="nav-item" href="#">
+        <a class="nav-item @(currentAction == "Campaigns" ? "active" : "")" href="/Admin/Campaigns">
             <span class="ni"><i class="fa-solid fa-bullhorn"></i></span> Campaigns
         </a>
-        <a class="nav-item" href="#">
+        <a class="nav-item @(currentAction == "Purposes" ? "active" : "")" href="/Admin/Purposes">
+            <span class="ni">
+                <i class="fa-solid fa-bullseye"></i>
+            </span>
+            Purposes
+        </a>
+        <a class="nav-item @(currentAction == "Users" ? "active" : "")" href="/Admin/Users">
             <span class="ni"><i class="fa-solid fa-users"></i></span> Donors
         </a>
-        <a class="nav-item" href="#">
+        <a class="nav-item @(currentAction == "CampaignDonations" ? "active" : "")" href="/Admin/CampaignDonations">
+      <span class="ni">
+        <i class="fa-solid fa-hand-holding-heart"></i>
+      </span>
+           Campaign Donations
+       </a>
+        <a class="nav-item @(currentAction == "Volunteers" ? "active" : "")" href="/Admin/Volunteers">
             <span class="ni"><i class="fa-solid fa-person-running"></i></span> Volunteers
         </a>
 
         <div class="sb-section">Organisation</div>
-        <a class="nav-item" href="#">
+
+        <a class="nav-item @(currentAction == "Events" ? "active" : "")" href="/Admin/Events">
             <span class="ni"><i class="fa-solid fa-calendar-days"></i></span> Events
+        </a>
+        <a class="nav-item @(currentAction == "EventParticipants" ? "active" : "")" href="/Admin/EventParticipants">
+            <span class="ni">
+                <i class="fa-solid fa-users"></i>
+            </span>
+            Event Participants
         </a>
         <a class="nav-item" href="#">
             <span class="ni"><i class="fa-solid fa-boxes-stacked"></i></span> Aid Inventory
@@ -370,7 +400,7 @@
         </a>
         <a class="nav-item" href="#">
             <span class="ni"><i class="fa-solid fa-envelope-open-text"></i></span> Newsletters
-            <span class="nb">3</span>
+            
         </a>
 
         <div class="sb-section">System</div>
@@ -380,12 +410,17 @@
         <a class="nav-item" href="#">
             <span class="ni"><i class="fa-solid fa-shield-halved"></i></span> Access Control
         </a>
-
+        <a class="nav-item" href="/Admin/Logout">
+            <span class="ni">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </span>
+            Logout
+        </a>
         <div class="sb-footer">
             <div class="sb-user">
                 <div class="sb-avatar">SA</div>
                 <div style="flex:1;min-width:0;">
-                    <div class="sb-uname">Sarah Ahmad</div>
+                    <div class="sb-uname">@Context.Session.GetString("AdminName")</div>
                     <div class="sb-urole">Super Admin</div>
                 </div>
                 <i class="fa-solid fa-ellipsis-vertical" style="color:rgba(255,255,255,0.25);font-size:13px;"></i>
@@ -398,10 +433,10 @@
 
         <!-- TOPBAR -->
         <header class="topbar">
-            <div class="tb-title">
-                Dashboard
-                <span>Friday, 22 May 2026</span>
-            </div>
+           <div class="tb-title">
+    @pageTitle
+    <span>@DateTime.Now.ToString("dddd, dd MMMM yyyy")</span>
+</div>
             <div class="searchbox">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Search donors, campaigns…" />
@@ -416,7 +451,9 @@
                 <div style="width:1px;height:28px;background:var(--gray-200);margin:0 2px;"></div>
                 <div style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:4px 8px;border-radius:8px;transition:background .14s;" onmouseover="this.style.background='var(--gray-100)'" onmouseout="this.style.background=''">
                     <div style="width:32px;height:32px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;">SA</div>
-                    <span style="font-size:13px;font-weight:600;color:var(--black);">Sarah Ahmad</span>
+                    <span style="font-size:13px;font-weight:600;color:var(--black);">
+                        @Context.Session.GetString("AdminName")
+                    </span>
                     <i class="fa-solid fa-chevron-down" style="font-size:10px;color:var(--gray-400);"></i>
                 </div>
             </div>
@@ -428,35 +465,5 @@
             @RenderBody()
         </div>
     </main>
-
-    <script>
-            const months=['J','F','M','A','M','J','J','A','S','O','N','D'];
-            const vals=[2.1,2.8,1.9,3.4,2.6,4.2,3.8,2.9,3.5,4.0,3.1,4.2];
-            const mc=document.getElementById('mc');
-            const mx=Math.max(...vals);
-            const now=new Date().getMonth();
-            vals.forEach((v,i)=>{
-              const col=document.createElement('div'); col.className='mc-col';
-              const bar=document.createElement('div'); bar.className='mc-bar'+(i===now?' cur':'');
-              bar.style.height=(v/mx*100)+'%'; bar.setAttribute('data-v','₨'+v+'M');
-              const lbl=document.createElement('div'); lbl.className='mc-lbl'; lbl.textContent=months[i];
-              col.appendChild(bar); col.appendChild(lbl); mc.appendChild(col);
-            });
-
-            document.querySelectorAll('.nav-item').forEach(el=>{
-              el.addEventListener('click',e=>{
-                e.preventDefault();
-                document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
-                el.classList.add('active');
-              });
-            });
-
-            document.querySelectorAll('tbody tr').forEach(row=>{
-              row.addEventListener('click',()=>{
-                document.querySelectorAll('tbody tr').forEach(r=>r.style.background='');
-                row.style.background='var(--blue-pale)';
-              });
-            });
-    </script>
 </body>
 </html>

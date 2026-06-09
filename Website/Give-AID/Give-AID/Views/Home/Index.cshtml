@@ -1,8 +1,548 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give-AID | Empowering Lives</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <style>
+        .navbar-brand {
+            font-size: 3.5rem;
+            font-weight: 800;
+        }
+
+        .hero-btn {
+            min-width: 280px;
+            padding: 18px 35px;
+            font-size: 1.4rem;
+        }
+
+            .hero-btn i {
+                margin-right: 10px;
+            }
+
+        .hero-section {
+            background: linear-gradient( 135deg, rgba(5,25,50,.92), rgba(5,80,50,.88)), url('https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1920') no-repeat center center/cover;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, rgba(10,58,96,.85), rgba(21,115,71,.85)), url('https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1920') no-repeat center center/cover;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .hero-content {
+            height: calc(100vh - 80px);
+        }
+
+        .counter-section {
+            background:white;
+            margin-top:-90px;
+            position:relative;
+            z-index:100;
+        }
+
+        .counter-box{
+    background:white;
+    color:black;
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+            .counter-box:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0,0,0,.3);
+            }
+
+        .about-icon-box {
+            animation-duration: 3s;
+        }
+
+        .section-title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg,#2563EB,#10B981);
+        }
+
+        footer {
+            background: #111827;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- HERO -->
+
+    <header class="hero-section">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent pt-3">
+            <div class="container">
+
+                <a class="navbar-brand fw-bold fs-3" href="#">
+                    <span class="text-info">Give-</span>
+                    <span class="text-success">AID</span>
+                </a>
+
+                <div>
+                    <a href="/Home/Login"
+                       class="btn btn-outline-light me-2 px-4 rounded-pill">
+                        Login
+                    </a>
+
+                    <a href="/Home/Register"
+                       class="btn btn-success px-4 rounded-pill shadow">
+                        Register
+                    </a>
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="container text-center text-white hero-content d-flex flex-column justify-content-center align-items-center">
+
+            <h1 class="fw-bold animate__animated animate__fadeInDown"
+                style="
+               font-size:95px;
+               line-height:1.05;
+             ">
+                Your Small Help Can
+                <br>
+                <span class="text-warning">
+                    Change a Life
+                </span>
+            </h1>
+
+            <p class="lead my-4 animate__animated animate__fadeInUp animate__delay-1s"
+                style="
+                font-size:32px;
+                max-width:900px;">
+                Join hands with Give-AID to bring smiles and support
+                to those who need it the most.
+            </p>
+
+            <div class="d-flex gap-4 mt-4">
+
+                <a href="/Home/Register"
+                   class="btn btn-success btn-lg px-5 rounded-pill hero-btn">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    Donate Now
+                </a>
+
+                <a href="/Home/Register"
+                   class="btn btn-outline-light btn-lg px-5 rounded-pill hero-btn">
+                    <i class="fa-solid fa-users"></i>
+                    Become Volunteer
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ABOUT -->
+
+    <section id="about" class="py-5 bg-light">
+
+        <div class="container py-4">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6">
+
+                    <h2 class="fw-bold mb-3">
+                        <span class="text-success">About</span>
+                        Give-AID
+                    </h2>
+
+                    <p class="text-muted fs-5">
+                        Give-AID is a transparent, tech-driven platform
+                        dedicated to connecting passionate volunteers and
+                        generous donors with impactful non-profit campaigns.
+                    </p>
+
+                    <p class="text-muted">
+                        Our automated management system ensures that funds,
+                        inventory, and volunteer actions are coordinated
+                        smoothly in real-time.
+                    </p>
+
+                </div>
+
+                <div class="col-md-6 text-center">
+
+                    <div class="about-icon-box animate__animated animate__pulse animate__infinite">
+
+                        <i class="fa-solid fa-hand-holding-heart text-success"
+                           style="font-size:150px;">
+                        </i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="py-5 bg-white">
+
+        <div class="container pt-3">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Mission</h2>
+                <p class="text-muted">
+                    Making donations, volunteering and aid distribution more transparent and impactful.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm p-4 text-center h-100">
+                        <i class="fa-solid fa-hand-holding-heart text-success fs-1 mb-3"></i>
+                        <h4>Transparency</h4>
+                        <p class="text-muted">
+                            Every donation is tracked and managed properly.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm p-4 text-center h-100">
+                        <i class="fa-solid fa-users text-primary fs-1 mb-3"></i>
+                        <h4>Community</h4>
+                        <p class="text-muted">
+                            Connecting donors, volunteers and people in need.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm p-4 text-center h-100">
+                        <i class="fa-solid fa-bullseye text-warning fs-1 mb-3"></i>
+                        <h4>Impact</h4>
+                        <p class="text-muted">
+                            Creating measurable and lasting change in society.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- COUNTERS -->
+
+    <section class="counter-section text-white text-center py-5">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="counter-box p-4">
+
+                        <i class="fa-solid fa-users display-4 text-info mb-3"></i>
+
+                        <h2 class="counter-value display-5 fw-bold"
+                            data-target="1500">
+                            0
+                        </h2>
+
+                        <p class="text-uppercase fw-semibold m-0">
+                            Total Users
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="counter-box p-4">
+
+                        <i class="fa-solid fa-bullhorn display-4 text-warning mb-3"></i>
+
+                        <h2 class="counter-value display-5 fw-bold"
+                            data-target="120">
+                            0
+                        </h2>
+
+                        <p class="text-uppercase fw-semibold m-0">
+                            Active Campaigns
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="counter-box p-4">
+
+                        <i class="fa-solid fa-hands-holding-child display-4 text-success mb-3"></i>
+
+                        <h2 class="counter-value display-5 fw-bold"
+                            data-target="450">
+                            0
+                        </h2>
+
+                        <p class="text-uppercase fw-semibold m-0">
+                            Volunteers Joined
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="py-5 bg-light">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Featured Campaigns</h2>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow h-100">
+                        <div class="card-body">
+                            <h4>Flood Relief</h4>
+                            <p>Providing food and shelter to flood victims.</p>
+                            <a href="/Home/Login" class="btn btn-success">
+                                Donate Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow h-100">
+                        <div class="card-body">
+                            <h4>Medical Support</h4>
+                            <p>Helping families afford essential treatments.</p>
+                            <a href="/Home/Login" class="btn btn-success">
+                                Donate Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow h-100">
+                        <div class="card-body">
+                            <h4>Education For All</h4>
+                            <p>Providing books and resources to children.</p>
+                            <a href="/Home/Login" class="btn btn-success">
+                                Donate Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Upcoming Events</h2>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card shadow border-0 p-4">
+                        <h4>Food Distribution Drive</h4>
+                        <p class="text-muted">Helping needy families.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow border-0 p-4">
+                        <h4>Medical Camp</h4>
+                        <p class="text-muted">Free health checkups.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow border-0 p-4">
+                        <h4>Tree Plantation</h4>
+                        <p class="text-muted">Building a greener future.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta-section text-white text-center py-5">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Ready to Make a Difference?
+            </h2>
+
+            <p class="lead mb-4">
+                Become a donor or volunteer and help us transform lives.
+            </p>
+
+            <a href="/Home/Register"
+               class="btn btn-light btn-lg px-5 rounded-pill">
+                Get Started
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="py-5 bg-dark text-white">
+
+        <div class="container text-center">
+
+            <h2 class="mb-4">Contact Us</h2>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                support@giveaid.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +92 300 1234567
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Karachi, Pakistan
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="text-white text-center py-4">
+
+        <p class="m-0">
+            © 2026 Give-AID Project. All Rights Reserved |
+            Aptech eProject Submission
+        </p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const counters =
+                document.querySelectorAll('.counter-value');
+
+            const speed = 150;
+
+            const startCounting = (counter) => {
+
+                const updateCount = () => {
+
+                    const target =
+                        +counter.getAttribute('data-target');
+
+                    const count =
+                        +counter.innerText;
+
+                    const inc =
+                        Math.ceil(target / speed);
+
+                    if (count < target) {
+
+                        counter.innerText =
+                            count + inc;
+
+                        setTimeout(updateCount, 15);
+
+                    }
+                    else {
+
+                        counter.innerText =
+                            target + "+";
+                    }
+                };
+
+                updateCount();
+            };
+
+            const observer =
+                new IntersectionObserver((entries) => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            startCounting(entry.target);
+
+                            observer.unobserve(entry.target);
+                        }
+
+                    });
+
+                }, { threshold: 0.5 });
+
+            counters.forEach(counter =>
+                observer.observe(counter));
+        });
+
+    </script>
+
+</body>
+</html>

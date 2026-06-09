@@ -1,0 +1,66 @@
+﻿@model Give_AID.Models.Donation
+
+@{
+    Layout = "~/Views/Shared/User_Layout.cshtml";
+}
+
+<div style="max-width:800px;background:white;padding:35px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.08);">
+
+    <h2 style="margin-bottom:10px;color:#2563EB;">
+        Make a Donation
+    </h2>
+
+    <p style="margin-bottom:25px;color:#64748B;">
+        Your contribution helps communities in need.
+    </p>
+
+    <form method="post">
+
+        <div style="margin-bottom:20px;">
+            <label>Amount</label>
+            <input asp-for="Amount"
+                   class="form-control"
+                   style="width:100%;padding:12px;border:1px solid #ccc;border-radius:10px;" />
+        </div>
+
+        <div style="margin-bottom:20px;">
+            <label>Purpose</label>
+
+            <select asp-for="Purpose_ID"
+                    class="form-control"
+                    style="width:100%;padding:12px;border:1px solid #ccc;border-radius:10px;">
+
+                <option value="">Select Purpose</option>
+
+                @foreach (var p in ViewBag.Purposes)
+                {
+                    <option value="@p.Id">
+                        @p.Purpose_Name
+                    </option>
+                }
+
+            </select>
+        </div>
+
+        <div style="margin-bottom:20px;">
+            <label>Payment Mode</label>
+
+            <select asp-for="Payment_Mode"
+                    class="form-control"
+                    style="width:100%;padding:12px;border:1px solid #ccc;border-radius:10px;">
+
+                <option>JazzCash</option>
+                <option>EasyPaisa</option>
+                <option>Bank Transfer</option>
+
+            </select>
+        </div>
+
+        <button type="submit"
+                style="background:#2563EB;color:white;border:none;padding:12px 25px;border-radius:10px;">
+            Donate Now
+        </button>
+
+    </form>
+
+</div>

@@ -1,0 +1,60 @@
+﻿@model List<Give_AID.Models.CampaignDonation>
+
+@{
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 style="margin-bottom:20px;">
+    Campaign Donations
+</h2>
+
+<table class="table table-bordered table-hover">
+
+    <thead style="background:#0F172A;color:white;">
+
+        <tr>
+            <th>ID</th>
+            <th>User Name</th>
+            <th>Campaign Name</th>
+            <th>Amount</th>
+            <th>Payment Mode</th>
+            <th>Donation Date</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.Id</td>
+
+                <td>@item.User.Name</td>
+
+                <td>@item.Campaign.Campaign_Name</td>
+
+                <td>
+                    <span style="
+                            background:#DBEAFE;
+                            color:#1D4ED8;
+                            padding:6px 12px;
+                            border-radius:20px;
+                            font-weight:600;">
+                        Rs. @item.Amount
+                    </span>
+                </td>
+
+                <td>@item.Payment_Mode</td>
+
+                <td>
+                    @item.Donation_Date.ToShortDateString()
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>
